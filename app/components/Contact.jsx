@@ -14,6 +14,7 @@ const Contact = () => {
         e.preventDefault()
 
         emailJs.sendForm(process.env.NEXT_PUBLIC_SERVICE, process.env.NEXT_PUBLIC_TEMPLATE, ref.current, process.env.NEXT_PUBLIC_ID).then((result) => {
+            // console.log(result)
             // console.log(result.text)
 
             setSuccess(true)
