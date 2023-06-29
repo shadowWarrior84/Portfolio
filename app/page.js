@@ -7,26 +7,31 @@ import Stats from "./components/Stats"
 import styles from "./styles"
 import { useEffect, useState } from "react"
 import Loader from "./components/Loader"
-import Aos from "aos"
-import "aos/dist/aos.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar2 from "./components/Navbar2"
 import Work from "./components/Work"
 import Contact from "./components/Contact"
 import Skills from "./components/Skills"
+
+const notify = () => {
+  toast.success('We"ll get back to you soon', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+}
 
 
 export default function Home() {
 
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    Aos.init({
-      easing: "ease-out-cubic",
-      once: true,
-      offset: 50,
-      duration: 800
-    })
-  }, [])
   useEffect(() => {
 
     setTimeout(() => (
@@ -63,7 +68,8 @@ export default function Home() {
                 <Business />
                 <Skills />
                 <Work />
-                <Contact />
+                <Contact notify={notify} />
+                <ToastContainer />
               </div>
             </div>
           </div>

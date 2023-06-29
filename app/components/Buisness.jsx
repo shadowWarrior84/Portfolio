@@ -9,7 +9,7 @@ import { BsCheckCircleFill } from 'react-icons/bs';
 import { Link } from 'react-scroll';
 
 const FeatureCard = ({ title, content, index }) => (
-    <motion.div variants={fadeIn("left", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
+    <motion.div variants={fadeIn("left", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
         <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
             <BsCheckCircleFill size={20} color="white" />
 
@@ -27,7 +27,7 @@ const FeatureCard = ({ title, content, index }) => (
 
 const Business = () => (
     <section id="features" className={layout.section}>
-        <motion.div variants={fadeIn("right", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className={`${layout.sectionInfo}`}>
+        <motion.div variants={fadeIn("right", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className={`${layout.sectionInfo}`}>
             <h2 className={styles.heading2}>
                 Have any project, <br className="sm:block hidden" /> don't worry
                 contact me.

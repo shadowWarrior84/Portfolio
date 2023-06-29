@@ -27,13 +27,13 @@ const AnimatedNumbers = ({ value }) => {
         })
     }, [springValue, value])
 
-    return <motion.h4 initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} ref={ref} className="font-poppins font-semibold xs:text-[40.89px] text-[30.89px] xs:leading-[53.16px] leading-[43.16px] text-white">
+    return <motion.h4 initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} ref={ref} className="font-poppins font-semibold xs:text-[40.89px] text-[30.89px] xs:leading-[53.16px] leading-[43.16px] text-white">
     </motion.h4>
 }
 
 const Stats = () => {
     return (
-        <motion.section variants={fadeIn("left", 0.1)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-3.5`} id="features">
+        <motion.section variants={fadeIn("left", 0.1)} initial="hidden" whileInView={"show"} className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-3.5`} id="features">
             <div className={`flex-1 flex justify-start items-center flex-row m-3`} >
                 <AnimatedNumbers value={12} />
                 <h4 className="font-poppins font-semibold xs:text-[40.89px] text-[30.89px] xs:leading-[53.16px] leading-[43.16px] text-white">

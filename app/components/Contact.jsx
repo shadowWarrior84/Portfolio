@@ -1,14 +1,15 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles, { layout } from '../styles'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../helper/variants'
 import emailJs from "@emailjs/browser"
 
 
-const Contact = () => {
+const Contact = ({ notify }) => {
 
     const ref = useRef()
     const [success, setSuccess] = useState(null)
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -18,11 +19,17 @@ const Contact = () => {
             // console.log(result.text)
 
             setSuccess(true)
+            ref.current.reset()
         }, (error) => {
             console.log(error.text)
             setSuccess(false)
         })
+
     }
+
+    // useEffect(() => {
+    //     ref.current?.reset()
+    // }, [])
 
     return (
         <section id="contact" className={`py:16 lg:section ${layout.section} ${styles.paddingY} mb-10`}>
@@ -40,7 +47,8 @@ const Contact = () => {
                         <input className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-purple transition-all text-white" type="text" placeholder="Your phone no" />
                         <textarea name="message" className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-purple transition-all resize-none mb-12 text-white" type="text" placeholder="Your message"></textarea>
                         <button type="submit" className="btn rounded-full font-primary text-white font-medium h-[56px] px-10 text-base">Send Message</button>
-                        {success && <span className="text-white">Your message has been sent, We'll get back to you soon :)</span>}
+                        {success && notify()}
+                        {/* // <span className="text-white">Your message has been sent, We'll get back to you soon :)</span>} */}
                     </motion.form>
                 </div>
             </div>
