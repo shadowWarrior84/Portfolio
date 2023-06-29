@@ -41,7 +41,7 @@ const Contact = ({ notify }) => {
                             <h2 className={`${styles.heading2} text-[45px] lg:text-[90px] leading-none mb-12 text-gradient`}>Let's work <br /> together!</h2>
                         </div>
                     </motion.div>
-                    <motion.form onSubmit={handleSubmit} ref={ref} variants={fadeIn("left", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} action="" className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6">
+                    <motion.form onSubmit={handleSubmit} ref={ref} variants={fadeIn("left", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} action="" className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6">
                         <input name="name" className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-purple transition-all text-white" type="text" placeholder="Your name" />
                         <input name="email" className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-purple transition-all text-white" type="text" placeholder="Your email" />
                         <input className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-purple transition-all text-white" type="text" placeholder="Your phone no" />
