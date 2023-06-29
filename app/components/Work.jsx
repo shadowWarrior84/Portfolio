@@ -9,7 +9,7 @@ const Work = () => {
         <section className="py-8 lg:py-24 lg:h-screen flex items-center mb-20" id="clients">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row gap-x-10">
-                    <motion.div variants={fadeIn("right", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
+                    <motion.div variants={fadeIn("right", 0.3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.2 }} className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
                         <div>
                             <h2 className="font-poppins text-[32px] mb-6 tracking-[10%] uppercase leading-tight text-cyan-400 font-bold">My Latest <br /> Work</h2>
                             <p className="max-w-sm mb-16 text-white text-[17.5px]">Here are some of my works which I have done across the time. Also to see all the projects which I have done all this time click the button below.</p>

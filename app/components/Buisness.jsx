@@ -27,7 +27,7 @@ const FeatureCard = ({ title, content, index }) => (
 
 const Business = () => (
     <section id="features" className={layout.section}>
-        <motion.div variants={fadeIn("right", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }} className={`${layout.sectionInfo}`}>
+        <motion.div variants={fadeIn("right", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.0 }} className={`${layout.sectionInfo}`}>
             <h2 className={styles.heading2}>
                 Have any project, <br className="sm:block hidden" /> don't worry
                 contact me.
