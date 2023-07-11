@@ -30,7 +30,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <h1 className="font-poppins font-semibold ss:text-[68px] text-[34px] text-white ss:leading-[100.8px] leading-[75px] w-full">
+                <h1 className="font-poppins font-semibold ss:text-[54px] text-[34px] text-white ss:leading-[100.8px] leading-[75px] w-full">
                     <TypeAnimation sequence={["a web developer.", 1500, "a student.", 1500, "an engineer.", 1500]} speed={50} wrapper="span" className="text-white"
                         repeat={Infinity}
                     />
